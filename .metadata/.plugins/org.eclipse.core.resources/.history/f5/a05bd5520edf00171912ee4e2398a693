@@ -1,0 +1,31 @@
+package com.ana.oo;
+
+import java.util.Scanner;
+
+public class GameTester {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int position = scanner.nextInt();
+		
+		int colum = 5;
+		int row = 3;
+
+		if (position / colum < row - 1) {
+			position = position + colum;
+			// 下
+		}
+		if (position / colum > row + 1) {
+			position = position - colum;
+			// 上
+		}
+		if (row < row + 1) {
+			position = position - row;
+			// 左
+		}
+		if (row > row + 1) {
+			position = position + row;
+			// 右
+		}
+	}
+}
