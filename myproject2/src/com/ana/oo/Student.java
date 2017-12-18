@@ -5,9 +5,7 @@ public class Student {
 	int english;
 	int math;
 	int chinese;
-	String name;
 
-<<<<<<< HEAD
 		public void print(){
 		System.out.println(english+"\t"+
 		math+"\t"+chinese);	
@@ -28,27 +26,4 @@ public class Student {
 			return(english+math+chinese)/3;
 		}
 		//方法 
-=======
-	public void print() {
-		System.out.println("Justin :" + english + "\t" + math + "\t" + chinese);
-		// 設計一個方法
-	}
-
-	public Student(int english, int math, int chinese) {
-		this.english = english;
-		this.math = math;
-		this.chinese = chinese;
-		// 建構子
-	}
-
-	public Student(String name) {
-		this.name = name;
-	}
-
-	// 建構子
-	public int getAverge() {
-		// 要回傳
-		return (english + math + chinese) / 3;
-	}
->>>>>>> e250edebb4301b98402ddff6a4a21cd6514dcc13
 }
