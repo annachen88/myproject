@@ -11,15 +11,19 @@ public class Student {
 		math+"\t"+chinese);	
 			//設計一個方法
 		}
-		public Student(int e,int m,int c)
-		{english =e;
-		math =m;
-		chinese =c;
-			//建構子
+		public Student() {
+		}
+		public Student(int english,int math,int chinese)
+		{this.english =english;
+		this.math =math;
+		this.chinese =chinese;
+			//建構子（不用加回傳值）
+	//this 
 			
 		}
 		public int getAverge(){
-			//要回傳
+			//要回傳（有void不用return）
 			return(english+math+chinese)/3;
 		}
+		//方法 
 }
