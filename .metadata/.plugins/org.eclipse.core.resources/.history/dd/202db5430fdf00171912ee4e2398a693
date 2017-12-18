@@ -1,0 +1,47 @@
+package com.ana.oo;
+
+import java.util.Scanner;
+
+public class GameTester {
+
+	public static void main(String[] args) {
+		Scanner scanner =new Scanner(System.in);
+		int i =scanner.nextInt();
+		int hp =100;
+		int position =0;
+		int colum = 5;
+		int row = 3;
+switch(i){
+case 2:
+		if (position / colum < row - 1) {
+			position = position + colum;
+			System.out.println(position);
+			// 下
+			hp =hp-5;
+		}else{hp=hp-30; break;}
+case 8:		
+		if (position / colum > row + 1) {
+			position = position - colum;
+			System.out.println(position);
+			// 上
+			hp =hp-5;
+		}else{hp=hp-30; break;}
+		
+case 4:		
+		if (row < row + 1) {
+			position = position - row;
+			System.out.println(position);
+			// 左
+			hp =hp-5;
+		}else{hp=hp-30;break;}
+		
+case 6:		
+		if (row > row + 1) {
+			position = position + row;
+			System.out.println(position);
+			// 右
+			hp =hp-5;
+		}else{hp=hp-30;break;}
+		
+	}}
+}
