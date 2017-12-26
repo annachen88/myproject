@@ -11,7 +11,7 @@ public class NineLazy {
 		   
 		   if(i<9&&i>3) {
 			   System.out.print("..."+"	");
-		   }else {System.out.print(j+"*"+i+"="+(i*j)+"	");}
+		   }else {System.out.print(j+"*"+i+"="+""+(i*j)+"	");}
 		    
 	   }System.out.println();
    }

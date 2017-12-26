@@ -5,6 +5,8 @@ public class Student {
 	int english;
 	int math;
 	int chinese;
+	String name;
+	static int pass = 60;
 
 		public void print(){
 		System.out.println(english+"\t"+
@@ -13,6 +15,7 @@ public class Student {
 		}
 		public Student() {
 		}
+		//空建構子
 		public Student(int english,int math,int chinese)
 		{this.english =english;
 		this.math =math;
