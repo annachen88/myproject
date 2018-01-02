@@ -1,0 +1,21 @@
+package com.ana.oo;
+
+public class GraduateStudent extends Student {
+	int thesis;
+
+	public GraduateStudent() {
+	}
+
+	@Override
+	//覆寫
+	public void print() {
+		//只能放大public
+		System.out.println(english + "\t" + math
+		+ "\t" + chinese + "\t" + thesis);
+	}
+	@Override
+	public int getAverge(){
+		//要回傳（有void不用return）
+		return(english+math+chinese+thesis)/4;
+	}
+}

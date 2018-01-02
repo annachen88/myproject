@@ -16,7 +16,8 @@ public class Tester {
 		System.out.println("Justin's average:"+ avg);
 		GraduateStudent  graduate =new GraduateStudent()  ;
 		graduate.getAverge();
-		graduate.thesis = 70;
+		//graduate.thesis = 70;
+	
 	}
 
 }
