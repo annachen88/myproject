@@ -1,0 +1,20 @@
+package com.ana.ticket;
+
+public class Ticket {
+	String date;
+	String time;
+	String fromPlace;
+	String toPlace;
+
+	public Ticket(String date, String time, String fromPlace, String toPlace) {
+		this.date = date;
+		this.time = time;
+		this.fromPlace = fromPlace;
+		this.toPlace = toPlace;
+	}
+
+	public void print() {
+		String total = date + " " + time + " " + fromPlace + " " + toPlace;
+		System.out.println(total);
+	}
+}

@@ -1,0 +1,5 @@
+package com.ana.customer;
+
+public class GoldenCustomer extends SliverCustomer {
+
+}
