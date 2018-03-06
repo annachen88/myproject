@@ -12,4 +12,8 @@ public class Customer {
 		int total = (int) (amount * (1 - discount));
 		System.out.println("原價:" + amount + "	" + "打折後:" + total);
 	}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> fd466c0b51181984dbb1e840e068cb4032e86e9c

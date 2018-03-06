@@ -1,0 +1,11 @@
+package com.ana.aa;
+
+import com.ana.oo.Student;
+
+public class GraduateStudent extends Student {
+	int thesis;
+	
+
+public GraduateStudent(){
+	
+}}

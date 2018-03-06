@@ -13,4 +13,8 @@ public class GoldenCustomer extends SliverCustomer {
 		int returnMoney = (int) (amount * discount);
 		System.out.println("原價:" + amount + "	" + "打折後:" + total + "還原金:" + returnMoney);
 	}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> fd466c0b51181984dbb1e840e068cb4032e86e9c
