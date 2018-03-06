@@ -26,7 +26,7 @@ public class Bubble {
 		}
 		
 		for (int i = 0; i <= 4; i++) 
-		System.out.println(n[i]);
+		System.out.print(n[i]+" ");
 		
 		Bubble b = new Bubble("B",34);
 		System.out.println(b.age);
