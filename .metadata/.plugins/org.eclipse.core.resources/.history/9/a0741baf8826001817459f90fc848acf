@@ -14,7 +14,7 @@ public class Main {
 			System.out.println("請投幣或選擇飲料（a或b或c）,或輸入0結束：");
 			Scanner scanner = new Scanner(System.in);
 			String coin = scanner.nextLine();
-
+<<<<<<< HEAD
 			// System.out.println(coin);
 
 			if (coin.equals("1") || coin.equals("5") || coin.equals("10")) {
@@ -58,7 +58,7 @@ public class Main {
 						break;
 
 					}
-
+=======
 			switch (coin) {
 			case "1":
 				left = left + 1;
@@ -100,7 +100,8 @@ public class Main {
 
 			default:
 				break;
-			}}}
+>>>>>>> fd466c0b51181984dbb1e840e068cb4032e86e9c
+			}
 			/*
 			 * for (;;) { System.out.println("販賣機餘額：" + left + "元");
 			 * System.out.println("請投幣或選擇飲料（a或b或c）,或輸入0結束："); Scanner scanner =
@@ -126,9 +127,9 @@ public class Main {
 			 * } } }
 			 */
 		}
-
-	
-
+<<<<<<< HEAD
+	}
+}
 
 /*
  * if (coin.equals("a")) { if (left < 15) { System.out.println("BEEP!");
@@ -142,7 +143,8 @@ public class Main {
  * 
  * } } }
  */
+=======
 
 	}
-
-
+}
+>>>>>>> fd466c0b51181984dbb1e840e068cb4032e86e9c

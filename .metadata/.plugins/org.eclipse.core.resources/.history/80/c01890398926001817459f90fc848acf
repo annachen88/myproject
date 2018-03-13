@@ -36,8 +36,8 @@ public class Tester {
 		}
 	}
 
-
+<<<<<<< HEAD
 }
-
-
-
+=======
+}
+>>>>>>> fd466c0b51181984dbb1e840e068cb4032e86e9c
