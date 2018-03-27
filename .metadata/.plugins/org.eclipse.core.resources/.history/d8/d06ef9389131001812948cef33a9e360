@@ -1,0 +1,9 @@
+package com.java2.object;
+
+public class ArrayListTester {
+
+	public static void main(String[] args) {
+		ArrayListTester<Integer> card = new ArrayListTester<>();
+	}
+
+}

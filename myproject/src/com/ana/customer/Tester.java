@@ -21,7 +21,7 @@ public class Tester {
 		 * SliverCustomer(1000); c2.print(); GoldenCustomer c3 =new
 		 * GoldenCustomer(1000); c3.print();
 		 */
-
+		Customer cc = new SliverCustomer(1000);//父類別=子物件
 		ArrayList<Customer> customers = new ArrayList<>();
 		Customer c1 = new Customer(1000);
 		SliverCustomer c2 = new SliverCustomer(1000);
@@ -36,12 +36,4 @@ public class Tester {
 		}
 	}
 
-<<<<<<< HEAD:myproject/src/com/ana/customer/Tester.java
 }
-=======
-
-}
-
-
-
->>>>>>> d0dd4a323bd39bfa3b65bca429335329eaca1a05:myproject2/src/com/ana/customer/Tester.java

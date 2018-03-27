@@ -1,0 +1,18 @@
+package com.java2.object;
+
+import java.util.List;
+import java.util.ArrayList;
+
+public class ArrayListTester {
+
+	public static void main(String[] args) {
+		ArrayList<Integer> card = new ArrayList<>();
+		List<Integer> cards =new ArrayList<>();
+		cards.add(0);
+		cards.add(1);
+		card.add(2);
+		System.out.println(cards.size());
+		
+	}
+
+}

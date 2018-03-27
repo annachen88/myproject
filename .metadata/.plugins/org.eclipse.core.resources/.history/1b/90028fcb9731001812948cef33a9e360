@@ -1,0 +1,11 @@
+package com.java2.object;
+
+import java.util.ArrayList;
+
+public class Poker2 {
+	String design ;
+	ArrayList<Integer> card = new ArrayList<>();
+	sout
+	
+		
+	
