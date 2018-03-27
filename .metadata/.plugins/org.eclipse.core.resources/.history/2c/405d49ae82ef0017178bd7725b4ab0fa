@@ -1,9 +1,0 @@
-package com.ana.aa;
-
-public class GraduateStudent extends Student {
-	int thesis;
-	
-
-public GraduateStudent(){
-	
-}}

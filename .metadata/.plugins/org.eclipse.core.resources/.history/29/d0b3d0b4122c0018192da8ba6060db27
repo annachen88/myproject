@@ -1,0 +1,25 @@
+package com.java2.object;
+
+public class ABGame {
+
+	public static void main(String[] args) {
+		int counta = 0;
+		int countb = 0;
+		 
+		String secret = "1356";
+		String user = "2641";
+		int length = secret.length();
+		for (int i = 0; i < user.length(); i++) {
+			char a = user.charAt(i);
+			for (int j = 0; j < secret.length(); j++) {
+				
+				if(a== secret.charAt(j))
+				if (i==j) {
+					counta++;
+				}else{countb++;}
+			}
+			
+		}System.out.println(counta+"A"+countb+"B");
+	}
+
+}

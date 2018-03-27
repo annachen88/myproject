@@ -1,0 +1,23 @@
+package com.java2.object;
+
+public class ABGame {
+
+	public static void main(String[] args) {
+		int count=0;;
+		String secret = "1356";
+		String user = "2641";
+		int length = secret.length();
+		for (int i = 0; i < secret.length(); i++) {
+			char c = secret.charAt(i);
+			System.out.println(c);
+			for(int j=0;j < user.length();j++ ){
+			char a = user.charAt(j);
+			System.out.print(a);
+			 if(c==a){
+				 count=count+1;
+			 }System.out.println(count);
+			}
+		}
+	}
+
+}

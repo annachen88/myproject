@@ -36,4 +36,12 @@ public class Tester {
 		}
 	}
 
+<<<<<<< HEAD:myproject/src/com/ana/customer/Tester.java
 }
+=======
+
+}
+
+
+
+>>>>>>> d0dd4a323bd39bfa3b65bca429335329eaca1a05:myproject2/src/com/ana/customer/Tester.java
