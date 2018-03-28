@@ -21,7 +21,7 @@ public class Tester {
 		 * SliverCustomer(1000); c2.print(); GoldenCustomer c3 =new
 		 * GoldenCustomer(1000); c3.print();
 		 */
-		Customer cc = new SliverCustomer(1000);//父類別=子物件
+
 		ArrayList<Customer> customers = new ArrayList<>();
 		Customer c1 = new Customer(1000);
 		SliverCustomer c2 = new SliverCustomer(1000);

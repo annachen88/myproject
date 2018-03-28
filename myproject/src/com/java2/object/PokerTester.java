@@ -1,12 +1,11 @@
 package com.java2.object;
 
+import java.util.Random;
+
 public class PokerTester {
 
-	public PokerTester() {
-	}
-
 	public static void main(String[] args) {
-		String flowers = "SHDC";
+		String design = "SHDC";
 		Poker poker = new Poker();
 		poker.change();
 		poker.show();

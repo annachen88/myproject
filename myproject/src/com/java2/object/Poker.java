@@ -5,8 +5,7 @@ import java.util.Random;
 public class Poker {
 	Random random = new Random();
 	// 洗牌
-	//design花色
-	String design ;
+	String design;
 	int[] cards = new int[52];
 
 	public Poker() {

@@ -5,9 +5,12 @@ import java.util.ArrayList;
 
 public class ArrayListTester {
 
+	public ArrayListTester() {
+	}
+
 	public static void main(String[] args) {
 		ArrayList<Integer> card = new ArrayList<>();
-		List<Integer> cards =new ArrayList<>();//父類別=子物件 
+		List<Integer> cards = new ArrayList<>();// 父類別=子物件
 		cards.add(10);
 		cards.add(12);
 		card.add(25);
@@ -15,7 +18,6 @@ public class ArrayListTester {
 		System.out.println(cards.size());
 		System.out.println(card.get(0));
 		System.out.println(cards.get(0));
-		System.out.println();
 	}
 
 }
