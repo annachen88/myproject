@@ -5,11 +5,9 @@ import java.util.Random;
 public class PokerTester {
 
 	public static void main(String[] args) {
-		String design = "SHDC";
-		Poker poker = new Poker();
+		Poker2 poker = new Poker2();
 		poker.change();
 		poker.show();
-
 	}
 
 }

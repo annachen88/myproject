@@ -5,21 +5,25 @@ import java.util.Random;
 public class Poker {
 	Random random = new Random();
 	// 洗牌
-	String design;
-	int[] cards = new int[52];
+	public String design = "SHDC";
+	public String[] cards = new String[52];
+	int p;
+	
 
 	public Poker() {
-		for (int i = 0; i < cards.length; i++) {
-			cards[i] = i;
-			System.out.println((cards[i] % 13 + 1) + "" + design.charAt(i / 13));
+		for (int j=0; j<design.length(); j++) {
+		for (int i = 0; i < 13; i++) {
+			cards[i+13*j] = Integer.toString(i+1) + design.charAt(j);
+			System.out.println(cards[i+13*j]);
+		}
 		}
 
 	}
 
 	public void change() {
-		for (int i = 0; i < design.length(); i++) {
+		for (int i = 0; i < cards.length; i++) {
 			int r = random.nextInt(52);
-			int tmp = cards[i];
+			String tmp = cards[i];
 			cards[i] = cards[r];
 			cards[r] = tmp;
 		}
@@ -27,9 +31,8 @@ public class Poker {
 
 	public void show() {
 		for (int i = 0; i < cards.length; i++) {
-			int c = cards[i];
-			System.out.print((c % 13) + 1 + "" + (design.charAt(c / 13)) + " ");
-			if (i % 13 == 0) {
+			System.out.print(cards[i] + " ");
+			if ((i+1) % 13 == 0) {
 				System.out.println();
 			}
 		}
