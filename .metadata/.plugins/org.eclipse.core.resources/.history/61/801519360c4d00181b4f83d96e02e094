@@ -2,7 +2,7 @@ package com.java2.io;
 
 import java.util.Scanner;
 
-public class Sogo implements Destroyable{
+public class Sogo {
 	Scanner scanner = new Scanner(System.in);
 
 	public Sogo() {
@@ -38,11 +38,5 @@ public class Sogo implements Destroyable{
 		Sogo sogo = new Sogo();
 		sogo.start();
 
-	}
-
-	@Override
-	public void destroy() {
-		// TODO Auto-generated method stub
-		
 	}
 }
