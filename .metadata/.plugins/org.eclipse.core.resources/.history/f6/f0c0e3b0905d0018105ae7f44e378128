@@ -7,7 +7,7 @@ public class Racing {
 
 	public static void main(String[] args) {
 		List<Horse> list =new ArrayList<>();
-        Horse h1 = new Horse(list );
+        Horse h1 = new Horse(List );
 		h1.start();
 		/*Horse h2 = new Horse();
 		h2.start();*/
