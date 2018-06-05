@@ -1,6 +1,6 @@
 package com.java2.net;
 
-<<<<<<< HEAD
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.Socket;
@@ -30,13 +30,6 @@ public class Tester {
 	}
 
 }
-=======
-public class Tester {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-Socket socket = new Socket();
-	}
 
-}
->>>>>>> 148c01786eefd7ee0971451f4463326a93f16eb4
+

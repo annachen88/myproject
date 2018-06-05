@@ -1,6 +1,6 @@
 package com.java2.net;
 
-<<<<<<< HEAD
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -30,13 +30,5 @@ public class MyServer {
 	}
 
 }
-=======
-public class MyServer {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
-
-}
->>>>>>> 148c01786eefd7ee0971451f4463326a93f16eb4
