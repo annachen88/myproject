@@ -12,8 +12,7 @@ import java.util.Set;
 
 public class Maze {
 
-	public Maze() {
-	}
+	
 
 	public void on() {
 		try {
@@ -28,7 +27,20 @@ public class Maze {
 			line = in.readLine();
 			String[] move = line.split(",");
 			for (int i = 0; i < move.length; i++) {
-
+				//System.out.println(Integer.parseInt(move[i]));
+				
+				switch(Integer.parseInt(move[i])) {
+				case 2:
+					
+					
+				case 4:
+					
+				case 6:
+					
+				case 8:
+					
+					
+				}
 			}
 			//產生的空地、陷阱
 			Set list = new HashSet<>();
@@ -39,11 +51,9 @@ public class Maze {
 			while(list.size()<5) {
 			Random random = new Random();
 			int maze =random.nextInt(a*b)+1;
-			list.add(maze);
-			
+			list.add(maze);		
 			}
-			System.out.println("陷阱："+list);
-			
+			System.out.println("陷阱："+list);			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

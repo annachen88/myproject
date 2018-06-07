@@ -5,7 +5,28 @@ import java.util.TreeMap;
 
 public class MazeDirection {
 
-	public MazeDirection() {
+	int position = 0;
+	int hp = 100;
+
+	public MazeDirection(int position, int hp) {
+		this.hp = hp;
+		this.position = position;
 	}
-    Map<Integer,String> map = new TreeMap<>();
+
+	public int getPosition() {
+		return position;
+	}
+
+	public void setPosition(int position) {
+		this.position = position;
+	}
+
+	public int getHp() {
+		return hp;
+	}
+
+	public void setHp(int hp) {
+		this.hp = hp;
+	}
+	
 }
