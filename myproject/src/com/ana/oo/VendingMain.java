@@ -15,20 +15,26 @@ public class VendingMain {
 		VendingMachine vm = new VendingMachine();
 
 		try {
+			//先讀取資料加入Drink
 			FileReader read = new FileReader("Vending.txt");
 			BufferedReader in = new BufferedReader(read);
 			String line = in.readLine();
 			String[] taken = line.split(",");
-			for (int i = 1; i <taken.length; i++) {
-				System.out.println(i+"	"+taken[1*i]+"	"+taken[2*i]);
+			int count = Integer.parseInt(taken[0]);
+			for (int i = 0; i < Integer.parseInt(taken[0]); i++) {
+				String name = taken[i * 2 + 1];
+				int price = Integer.parseInt(taken[i * 2 + 2]);
+				vm.drinks.add(new Drink(i + 1, name, price));
+				// for (int i = 1; i <= Integer.parseInt(taken[0]); i++) {
+				// System.out.println(i+" "+taken[1*i]+" "+taken[2*i]);
 			}
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
+		} catch (IOException e) {	
 			e.printStackTrace();
 		}
+		//使用方法
+		vm.on();
 	}
 
 }

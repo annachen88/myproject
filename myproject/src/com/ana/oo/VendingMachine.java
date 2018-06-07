@@ -9,13 +9,36 @@ import java.util.Scanner;
 public class VendingMachine {
 	int coin = 0;
 	List<Drink> drinks = new ArrayList<>();
+
 	public void on() {
 		System.out.println("Please insert the coins !");
 		Scanner scanner = new Scanner(System.in);
-		int number = scanner.nextInt();
-		coin=coin+number;
-		
+		//先印出飲料資訊
+		for (int i=0; i<drinks.size(); i++){
+			Drink drink = drinks.get(i);
+			System.out.println(drink.getId() + "\t" + drink.getName() + "\t" + drink.getPrice());
+		}
+		/*int data = -1;
+		while (data != 0) {
+			data = scanner.nextInt();
+			switch (data) {
+			case 0:
+				break;
+			}
+		}*/
+		for (;;) {
+			int number = scanner.nextInt();
+			coin = coin + number;
+			
+				/*switch (coin) {
+				case 0:
+					break;
+				
 
+			}*/
+		if(coin==0)break;
+
+		}
 	}
 	// List<Drink> drinks = new ArrayList<>();
 
