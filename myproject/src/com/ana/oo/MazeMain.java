@@ -13,7 +13,7 @@ public class MazeMain {
 			String line = in.readLine();
 			String[] token = line.split(",");
 			int a = Integer.parseInt(token[0]);
-			int b = Integer.parseInt(token[0]);
+			int b = Integer.parseInt(token[1]);
 			line = in.readLine();
 			int trap = Integer.parseInt(line);
 			line = in.readLine();

@@ -1,6 +1,8 @@
 package com.ana.oo;
 
 public class Drink {
+	//包含飲料 id,name,price
+	//製作建構子和方法
 	int id ;
 	String name;
 	int price;

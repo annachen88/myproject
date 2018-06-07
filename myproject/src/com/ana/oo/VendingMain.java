@@ -12,15 +12,16 @@ public class VendingMain {
 
 	public static void main(String[] args) {
 		List<Drink> drinks = new ArrayList<>();
-		VendingMachine vm = new VendingMachine(); 
-		
-		
-		
+		VendingMachine vm = new VendingMachine();
+
 		try {
 			FileReader read = new FileReader("Vending.txt");
 			BufferedReader in = new BufferedReader(read);
 			String line = in.readLine();
-			System.out.println(line);
+			String[] taken = line.split(",");
+			for (int i = 1; i <taken.length; i++) {
+				System.out.println(i+"	"+taken[1*i]+"	"+taken[2*i]);
+			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
