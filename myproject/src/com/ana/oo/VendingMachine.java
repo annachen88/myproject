@@ -13,30 +13,29 @@ public class VendingMachine {
 	public void on() {
 		System.out.println("Please insert the coins !");
 		Scanner scanner = new Scanner(System.in);
-		//先印出飲料資訊
-		for (int i=0; i<drinks.size(); i++){
+		// 先印出飲料資訊
+		for (int i = 0; i < drinks.size(); i++) {
 			Drink drink = drinks.get(i);
 			System.out.println(drink.getId() + "\t" + drink.getName() + "\t" + drink.getPrice());
 		}
-		/*int data = -1;
-		while (data != 0) {
-			data = scanner.nextInt();
-			switch (data) {
-			case 0:
-				break;
-			}
-		}*/
+		/*
+		 * int data = -1; 
+		 * while (data != 0) { 
+		 * data = scanner.nextInt(); 
+		 * switch (data) {
+		 * case 0:
+		 * break; } }
+		 */
 		for (;;) {
 			int number = scanner.nextInt();
 			coin = coin + number;
+			System.out.println("目前餘額："+" "+coin);
+			/*
+			 * switch (coin) { case 0: break; }
+			 */
 			
-				/*switch (coin) {
-				case 0:
-					break;
-				
-
-			}*/
-		if(coin==0)break;
+			if (coin == 0)
+				break;
 
 		}
 	}
