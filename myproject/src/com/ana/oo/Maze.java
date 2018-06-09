@@ -15,6 +15,8 @@ public class Maze {
 	
 
 	public void on() {
+		
+		MazeDirection movement = new MazeDirection(0,100);
 		try {
 			FileReader read = new FileReader("maze.txt");
 			BufferedReader in = new BufferedReader(read);
@@ -25,25 +27,8 @@ public class Maze {
 			line = in.readLine();
 			int trap = Integer.parseInt(line);
 			line = in.readLine();
-			String[] move = line.split(",");
-			for (int i = 0; i < move.length; i++) {
-				//System.out.println(Integer.parseInt(move[i]));
-				
-				switch(Integer.parseInt(move[i])) {
-				case 2:
-					
-					
-				case 4:
-					
-				case 6:
-					
-				case 8:
-					
-					
-				}
-			}
 			//產生的空地、陷阱
-			Set list = new HashSet<>();
+			Set list = new HashSet<>();			
 			/*for (int i = 1; i <= a * b; i++) {
 				list.add(i);
 			}*/
@@ -53,7 +38,52 @@ public class Maze {
 			int maze =random.nextInt(a*b)+1;
 			list.add(maze);		
 			}
-			System.out.println("陷阱："+list);			
+			System.out.println("陷阱："+list);		
+			String[] move = line.split(",");
+			for (int i = 0; i < move.length; i++) {
+				//System.out.println(Integer.parseInt(move[i]));	
+				System.out.println("現在位置："+" "+movement.position+"	"+"HP值:"+" "+movement.hp);
+				switch(Integer.parseInt(move[i])) {
+				case 2:
+					movement.position = movement.position + (a - 1);
+					if (list.contains(movement.position)) {
+						movement.hp = movement.hp - 20;
+					} else {
+						movement.hp = movement.hp - 5;
+					}
+					break;
+				case 4:
+					movement.position = movement.position + 1;
+					if (list.contains(movement.position)) {
+						movement.hp = movement.hp - 20;
+					} else {
+						movement.hp = movement.hp - 5;
+					}
+					break;
+				case 6:
+					movement.position = movement.position - 1;
+					if (list.contains(movement.position)) {
+						movement.hp = movement.hp - 20;
+					} else {
+						movement.hp = movement.hp - 5;
+					}
+					break;
+				case 8:
+					movement.position = movement.position - (a - 1);
+					if (list.contains(movement.position)) {
+						movement.hp = movement.hp - 20;
+					} else {
+						movement.hp = movement.hp - 5;
+					}
+					break;
+				}
+			}
+			//Set<MazeDirection> situation =new HashSet<>();
+			
+			
+			
+			
+				
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

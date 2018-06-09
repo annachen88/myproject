@@ -24,7 +24,7 @@ public class VendingMain {
 			for (int i = 0; i < Integer.parseInt(taken[0]); i++) {
 				String name = taken[i * 2 + 1];
 				int price = Integer.parseInt(taken[i * 2 + 2]);
-				vm.drinks.add(new Drink(i + 1, name, price));
+			vm.drinks.add(new Drink(i + 1, name, price));
 				// for (int i = 1; i <= Integer.parseInt(taken[0]); i++) {
 				// System.out.println(i+" "+taken[1*i]+" "+taken[2*i]);
 			}

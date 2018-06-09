@@ -27,6 +27,7 @@ public class VendingMachine {
 		 * break; } }
 		 */
 		for (;;) {
+			System.out.println("Please insert the coins!");
 			int number = scanner.nextInt();
 			coin = coin + number;
 			System.out.println("目前餘額：" + " " + coin);
@@ -39,33 +40,40 @@ public class VendingMachine {
 					int beverage = scanner.nextInt();
 					switch (beverage) {
 					case 1:
-						coin = coin - 25;
-						if(coin<25) {System.out.println("餘額不足!!");}
-						else {
-						System.out.println("Cola Out!!");}
+						if (coin < 25) {
+							System.out.println("餘額不足!!");
+						} else {
+							coin = coin - 25;
+							System.out.println("Cola Out!!");
+						}
 						break;
 					case 2:
-						coin = coin - 30;
-						if(coin<30) {System.out.println("餘額不足!!");}
-						else {
-						System.out.println("Juice Out!!");}
+						if (coin < 30) {
+							System.out.println("餘額不足!!");
+						} else {
+							coin = coin - 30;
+							System.out.println("Juice Out!!");
+						}
 						break;
 					case 3:
-						coin = coin - 20;
-						if(coin<20) {System.out.println("餘額不足!!");}
-						else {
-						System.out.println("Sprite Out!!");}
+						if (coin < 20) {
+							System.out.println("餘額不足!!");
+						} else {
+							coin = coin - 20;
+							System.out.println("Sprite Out!!");
+						}
 						break;
 
 					}
-			}
 				}
-			 
+			}
+
 			if (coin == 0) {
 				System.out.println("End!!");
 				break;
 
-		}}
+			}
+		}
 	}
 	// List<Drink> drinks = new ArrayList<>();
 

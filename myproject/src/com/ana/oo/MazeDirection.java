@@ -5,8 +5,8 @@ import java.util.TreeMap;
 
 public class MazeDirection {
 
-	int position = 0;
-	int hp = 100;
+	int position ;
+	int hp ;
 
 	public MazeDirection(int position, int hp) {
 		this.hp = hp;
