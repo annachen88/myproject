@@ -16,7 +16,7 @@ public class Maze {
 
 	public void on() {
 		
-		MazeDirection movement = new MazeDirection(0,100);
+		MazeDirection movement = new MazeDirection(1,100);
 		try {
 			FileReader read = new FileReader("maze.txt");
 			BufferedReader in = new BufferedReader(read);
@@ -42,38 +42,56 @@ public class Maze {
 			String[] move = line.split(",");
 			for (int i = 0; i < move.length; i++) {
 				//System.out.println(Integer.parseInt(move[i]));	
+				
 				System.out.println("現在位置："+" "+movement.position+"	"+"HP值:"+" "+movement.hp);
 				switch(Integer.parseInt(move[i])) {
 				case 2:
-					movement.position = movement.position + (a - 1);
-					if (list.contains(movement.position)) {
+					if (movement.position <= 24 && movement.position >= 19) {
+						movement.position = movement.position;
 						movement.hp = movement.hp - 20;
 					} else {
+						movement.position = movement.position + a;
 						movement.hp = movement.hp - 5;
 					}
-					break;
-				case 4:
-					movement.position = movement.position + 1;
 					if (list.contains(movement.position)) {
 						movement.hp = movement.hp - 20;
+					}
+
+					break;
+				case 4:
+					if (movement.position % a == 0) {
+						movement.position = movement.position;
+						movement.hp = movement.hp - 20;
 					} else {
+						movement.position = movement.position + 1;
 						movement.hp = movement.hp - 5;
+					}
+					if (list.contains(movement.position)) {
+						movement.hp = movement.hp - 20;
 					}
 					break;
 				case 6:
-					movement.position = movement.position - 1;
-					if (list.contains(movement.position)) {
+					if (movement.position % a == 1) {
+						movement.position = movement.position;
 						movement.hp = movement.hp - 20;
 					} else {
+						movement.position = movement.position - 1;
 						movement.hp = movement.hp - 5;
+					}
+					if (list.contains(movement.position)) {
+						movement.hp = movement.hp - 20;
 					}
 					break;
 				case 8:
-					movement.position = movement.position - (a - 1);
-					if (list.contains(movement.position)) {
+					if (movement.position >= 1 && movement.position <= 6) {
+						movement.position = movement.position;
 						movement.hp = movement.hp - 20;
 					} else {
+						movement.position = movement.position - a;
 						movement.hp = movement.hp - 5;
+					}
+					if (list.contains(movement.position)) {
+						movement.hp = movement.hp - 20;
 					}
 					break;
 				}
