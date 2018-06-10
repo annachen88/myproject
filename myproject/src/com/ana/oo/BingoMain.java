@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class BingoMain {
@@ -17,36 +18,61 @@ public class BingoMain {
 	public BingoMain() {
 		
 	}
-	 
+
 	public void BingoPrint() {
 		try {
 			FileReader read = new FileReader("bingo.txt");
 			BufferedReader in = new BufferedReader(read);
 			String line = in.readLine();
-			int a =Integer.parseInt(line);
-			int b =(int) Math.sqrt(a);
-			 System.out.println(b);
-			//加入數字
+			int a = Integer.parseInt(line);
+			int b = (int) Math.sqrt(a);
+			//System.out.println(b);
+			String line2 = in.readLine();
+			String[] taken = line2.split(",");
+			
+			/*for(int i=0;i<taken.length;i++) {
+				int[] taken2 = Integer.parseInt(taken);
+			}*/
+			
+			// 加入數字;印出
 			List<Integer> bingo = new ArrayList<>();
 			for (int i = 1; i <= a; i++) {
 				bingo.add(i);
 			}
-			for(int i=1;i<=a;i++) {
-			System.out.print(bingo.get(i-1)+"	");
-			if(i%b==0) {
-				System.out.println();
+			/*int i=0;
+		    for(String str:strings){
+		        intarray[i]=Integer.parseInt(str);//Exception in this line
+		        i++;
+		    }*/
+			for (int i = 1; i <= a; i++) {
+				System.out.print(bingo.get(i - 1) + "	");
+				if (i % b == 0) {
+					System.out.println();
+				}
+			}
+			System.out.println();
+			// 打亂
+			Collections.shuffle(bingo);
+			for (int i = 1; i <= a; i++) {
+				// Collections.shuffle(bingo);
+				System.out.print(bingo.get(i - 1) + "	");
+				if (i % b == 0) {
+					System.out.println();
+				}
+			}
+			//改成"o"
+			for (int i = 1; i <= a; i++) {
+			if(bingo.contains(taken)) {
+				System.out.println("o");
 			}
 			}
-			//int b;
-
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
+
 	}
 
 	public static void main(String[] args) {
