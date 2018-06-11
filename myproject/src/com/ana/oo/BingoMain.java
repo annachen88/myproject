@@ -15,8 +15,10 @@ public class BingoMain {
 	 * 25表示有5X5 25顆球 產生時亂數印出 5 6 7 8 9 10 1 2 3 4 8 11
 	 * 
 	 */
+	int a, b;
+
 	public BingoMain() {
-		
+
 	}
 
 	public void BingoPrint() {
@@ -24,48 +26,60 @@ public class BingoMain {
 			FileReader read = new FileReader("bingo.txt");
 			BufferedReader in = new BufferedReader(read);
 			String line = in.readLine();
-			int a = Integer.parseInt(line);
-			int b = (int) Math.sqrt(a);
-			//System.out.println(b);
+			a = Integer.parseInt(line);
+			b = (int) Math.sqrt(a);
+			// System.out.println(b);
 			String line2 = in.readLine();
 			String[] taken = line2.split(",");
-			
-			/*for(int i=0;i<taken.length;i++) {
-				int[] taken2 = Integer.parseInt(taken);
-			}*/
-			
+
+			/*
+			 * for(int i=0;i<taken.length;i++) { int[] taken2 = Integer.parseInt(taken); }
+			 */
+
 			// 加入數字;印出
-			List<Integer> bingo = new ArrayList<>();
-			for (int i = 1; i <= a; i++) {
-				bingo.add(i);
+			List<String> bingo = new ArrayList<String>();
+			for (int i = 0; i < a; i++) {
+				bingo.add(new Integer(i + 1).toString());
 			}
-			/*int i=0;
-		    for(String str:strings){
-		        intarray[i]=Integer.parseInt(str);//Exception in this line
-		        i++;
-		    }*/
-			for (int i = 1; i <= a; i++) {
-				System.out.print(bingo.get(i - 1) + "	");
-				if (i % b == 0) {
+			/*
+			 * int i=0; for(String str:strings){
+			 * intarray[i]=Integer.parseInt(str);//Exception in this line i++; }
+			 */
+			for (int i = 0; i < a; i++) {
+				System.out.print(bingo.get(i) + "	");
+				if (i % b == 4) {
 					System.out.println();
 				}
-			}
-			System.out.println();
-			// 打亂
-			Collections.shuffle(bingo);
-			for (int i = 1; i <= a; i++) {
-				// Collections.shuffle(bingo);
-				System.out.print(bingo.get(i - 1) + "	");
-				if (i % b == 0) {
-					System.out.println();
+			}System.out.println();
+				// 打亂
+				Collections.shuffle(bingo);
+				for (int j = 0; j < a; j++) {
+					// Collections.shuffle(bingo);
+					System.out.print(bingo.get(j) + "	");
+					if (j % b == 4) {
+						System.out.println();
+					}
 				}
-			}
-			//改成"o"
-			for (int i = 1; i <= a; i++) {
-			if(bingo.contains(taken)) {
-				System.out.println("o");
-			}
-			}
+				System.out.println();
+				// 改成"o"
+				// for (int i =0;i<=a;i++) {
+				// taken[i]=
+				// }
+				for (int k = 0; k < a; k++) {
+					for (int j = 0; j < taken.length; j++) {
+						if (bingo.get(k).equals(taken[j])) {
+							String circle = "O";
+							bingo.set(k, circle);
+							// System.out.println("o");
+						}
+					}
+				}
+				for (int l = 0; l < a; l++) {
+					System.out.print(bingo.get(l) + "	");
+					if (l % b == 4) {
+						System.out.println();
+					}
+				}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class VendingMain {
 
 	public static void main(String[] args) {
-		List<Drink> drinks = new ArrayList<>();
+		//List<Drink> drinks = new ArrayList<>();
 		VendingMachine vm = new VendingMachine();
 
 		try {

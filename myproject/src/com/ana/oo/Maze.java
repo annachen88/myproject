@@ -12,8 +12,6 @@ import java.util.Set;
 
 public class Maze {
 
-	
-
 	public void on() {
 		
 		MazeDirection movement = new MazeDirection(1,100);
