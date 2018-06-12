@@ -1,9 +1,0 @@
-package com.java2.object;
-
-public class ArrayList {
-
-	public static void main(String[] args) {
-		ArrayList<Integer> card = new ArrayList<>();
-	}
-
-}
