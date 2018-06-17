@@ -2,6 +2,7 @@ package com.ana.oo;
 
 
 public class Schedule {
+<<<<<<< HEAD
 String courseNumber;
 String course;
 int week;
@@ -66,6 +67,14 @@ int hour;
 	public void setHour(int hour) {
 		this.hour = hour;
 	}
+=======
+
+	
+public Schedule(){}
+	
+	
+	
+>>>>>>> a70cb20e1c32390b520c738413ad04e21f60874a
 	
 	
 	
