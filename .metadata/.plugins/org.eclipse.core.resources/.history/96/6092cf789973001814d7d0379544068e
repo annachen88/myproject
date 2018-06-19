@@ -123,7 +123,7 @@ public class ScheduleMain {
 			int read1 = scanner.nextInt();
 			System.out.println(" 請輸入時(0-24):");
 			int read2 = scanner.nextInt();
-			
+			if(read1==)
 
 		}
 	}

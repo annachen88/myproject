@@ -84,13 +84,10 @@ public class ScheduleMain {
 			FileReader read = new FileReader("schedule.txt");
 			BufferedReader in = new BufferedReader(read);
 			String line = in.readLine();
-			while(line!=null){
 			String[] line1 = line.split(",");
 			course.scheduleList.add
 			(new Schedule(line1[0], line1[1], Integer.parseInt(line1[2]), Integer.parseInt(line1[3]),Integer.parseInt(line1[4])));
 			line = in.readLine();
-			}
-			/*line = in.readLine();
 			String[] line2 = line.split(",");
 			course.scheduleList.add
 			(new Schedule(line2[0], line2[1], Integer.parseInt(line2[2]), Integer.parseInt(line2[3]),Integer.parseInt(line2[4])));
@@ -102,7 +99,7 @@ public class ScheduleMain {
 			String[] line4 = line.split(",");
 			course.scheduleList.add
 			(new Schedule(line4[0], line4[1], Integer.parseInt(line4[2]), Integer.parseInt(line4[3]),Integer.parseInt(line4[4])));
-*/
+
 
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
