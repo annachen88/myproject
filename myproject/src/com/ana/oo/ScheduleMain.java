@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -18,8 +19,8 @@ import java.util.Scanner;
  * 請輸入時(0-24):14
  * 【有課: C004 English 到 16時 】
  */
- class Schedule {
-	String courseNumber;
+class Schedule {
+	private String courseNumber;
 	String course;
 	int week;
 	int time;
@@ -41,7 +42,7 @@ import java.util.Scanner;
 		this.courseNumber = courseNumber;
 	}
 
-	 String getCourse() {
+	String getCourse() {
 		return course;
 	}
 
@@ -76,30 +77,20 @@ import java.util.Scanner;
 }
 
 public class ScheduleMain {
-	
+	static List<Schedule> scheduleList = new ArrayList<>();
+
 	public static void main(String[] args) {
-		Course course = new Course();
-		
+
 		try {
 			FileReader read = new FileReader("schedule.txt");
 			BufferedReader in = new BufferedReader(read);
 			String line = in.readLine();
-			String[] line1 = line.split(",");
-			course.scheduleList.add
-			(new Schedule(line1[0], line1[1], Integer.parseInt(line1[2]), Integer.parseInt(line1[3]),Integer.parseInt(line1[4])));
-			line = in.readLine();
-			String[] line2 = line.split(",");
-			course.scheduleList.add
-			(new Schedule(line2[0], line2[1], Integer.parseInt(line2[2]), Integer.parseInt(line2[3]),Integer.parseInt(line2[4])));
-			line = in.readLine();
-			String[] line3 = line.split(",");
-			course.scheduleList.add
-			(new Schedule(line3[0], line3[1], Integer.parseInt(line3[2]), Integer.parseInt(line3[3]),Integer.parseInt(line3[4])));
-			line = in.readLine();
-			String[] line4 = line.split(",");
-			course.scheduleList.add
-			(new Schedule(line4[0], line4[1], Integer.parseInt(line4[2]), Integer.parseInt(line4[3]),Integer.parseInt(line4[4])));
-
+			while (line != null) {
+				String[] line1 = line.split(",");
+				scheduleList.add(new Schedule(line1[0], line1[1], Integer.parseInt(line1[2]),
+						Integer.parseInt(line1[3]), Integer.parseInt(line1[4])));
+				line = in.readLine();
+			}
 
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -108,19 +99,35 @@ public class ScheduleMain {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	}}
-
-	 class Course {
-
-		List<Schedule> scheduleList = new ArrayList<>();
-
-		public void gap() {
-			Scanner scanner = new Scanner(System.in);
-			System.out.println("請輸入星期(1-7):");
-			int read1 = scanner.nextInt();
-			System.out.println(" 請輸入時(0-24):");
-			int read2 = scanner.nextInt();
-			
-
-		}
+//		Iterator itr = scheduleList.iterator();
+//		while (itr.hasNext()) {
+//			Schedule str = (Schedule) itr.next();
+//			System.out.println(str.getCourseNumber() + "  " + str.course);
+//		}
+		gap();
 	}
+
+	public static void gap() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("請輸入星期(1-7):");
+		int read1 = scanner.nextInt();
+		System.out.println(" 請輸入時(0-24):");
+		int read2 = scanner.nextInt();
+		int i = 0;
+		boolean week = true;
+		while (week&&i<scheduleList.size()) {
+			if (read1 == scheduleList.get(i).getWeek()) {
+			
+				if (read2 < scheduleList.get(i).getTime() + scheduleList.get(i).getHour()
+						&& read2 >= scheduleList.get(i).getTime()) {
+					System.out.println("No ");
+					week = false;
+				} else
+					i++;
+			} else
+				i++;
+		}
+		if (week == true) System.out.println("Yes  "); 
+
+	}
+}
