@@ -79,40 +79,18 @@ class Schedule {
 public class ScheduleMain {
 	static List<Schedule> scheduleList = new ArrayList<>();
 
-	public static void main(String[] args) {
+	public  void main(String[] args) {
 
 		try {
 			FileReader read = new FileReader("schedule.txt");
 			BufferedReader in = new BufferedReader(read);
 			String line = in.readLine();
-<<<<<<< HEAD
 			while (line != null) {
 				String[] line1 = line.split(",");
 				scheduleList.add(new Schedule(line1[0], line1[1], Integer.parseInt(line1[2]),
 						Integer.parseInt(line1[3]), Integer.parseInt(line1[4])));
 				line = in.readLine();
 			}
-=======
-			while(line!=null){
-			String[] line1 = line.split(",");
-			course.scheduleList.add
-			(new Schedule(line1[0], line1[1], Integer.parseInt(line1[2]), Integer.parseInt(line1[3]),Integer.parseInt(line1[4])));
-			line = in.readLine();
-			}
-			/*line = in.readLine();
-			String[] line2 = line.split(",");
-			course.scheduleList.add
-			(new Schedule(line2[0], line2[1], Integer.parseInt(line2[2]), Integer.parseInt(line2[3]),Integer.parseInt(line2[4])));
-			line = in.readLine();
-			String[] line3 = line.split(",");
-			course.scheduleList.add
-			(new Schedule(line3[0], line3[1], Integer.parseInt(line3[2]), Integer.parseInt(line3[3]),Integer.parseInt(line3[4])));
-			line = in.readLine();
-			String[] line4 = line.split(",");
-			course.scheduleList.add
-			(new Schedule(line4[0], line4[1], Integer.parseInt(line4[2]), Integer.parseInt(line4[3]),Integer.parseInt(line4[4])));
-*/
->>>>>>> b6b1bba1596a20fae5973697fdbf85c0261f35a4
 
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
